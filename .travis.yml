@@ -19,4 +19,5 @@ before_script:
 - cd ..
 
 script:
-- python3 daemon/unittest/dbservicetestcase.py
+- cd daemon
+- python3 unittest/dbservicetestcase.py
