@@ -16,6 +16,7 @@ before_script:
 - pip install pycurl
 - cd docker
 - docker-compose up -d
+- docker-compose ps
 - cd ..
 
 script:
