@@ -21,11 +21,11 @@ class DBServiceTestCase(unittest.TestCase):
             config = Config("../xmusic.cfg")
             db_init(config.db_username,
                     config.db_password,
-                    "localhost",
+                    config.db_host,
                     config.db_port,
                     config.db_database)
 
-            self.provider = ProviderRepo().get_provider("youtube")[0]
+            self.provider = ProviderRepo().get_provider("youtube")
 
         except:
             self.fail()
