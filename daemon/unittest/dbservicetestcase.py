@@ -24,8 +24,9 @@ class DBServiceTestCase(unittest.TestCase):
                     config.db_host,
                     config.db_port,
                     config.db_database)
-
+            print("--------------------------------------")
             self.provider = ProviderRepo().get_provider("youtube")
+            print("======================================")
 
         except:
             self.fail()
