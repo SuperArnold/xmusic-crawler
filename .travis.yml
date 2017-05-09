@@ -13,6 +13,7 @@ before_script:
 - pip install json-rpc
 - pip install psutil
 - pip install pycurl
+- cd docker
 - docker-compose up -d
 
 script:
