@@ -13,6 +13,7 @@ before_script:
 - pip install json-rpc
 - pip install psutil
 - pip install pycurl
+- docker-compose up -d
 
 script:
 - python3 daemon/unittest/test.py
