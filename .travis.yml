@@ -1,0 +1,21 @@
+language: python
+python:
+- 3.5
+
+services:
+- docker
+
+before_script:
+- cd docker
+- docker-compose up -d
+- cd ..
+- pip install psycopg2
+- pip install sqlalchemy
+- pip install pycurl
+- pip install isodate
+- pip install json-rpc
+- pip install psutil
+- pip install pycurl
+
+script:
+- python3 daemon/unittest/test.py
