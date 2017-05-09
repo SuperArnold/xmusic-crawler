@@ -11,7 +11,7 @@ before_script:
 - cd docker
 - ls
 - pwd
-- docker-compose start
+- docker-compose up -d
 - cd ..
 - pip install psycopg2
 - pip install sqlalchemy
