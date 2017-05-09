@@ -6,13 +6,6 @@ services:
 - docker
 
 before_script:
-- ls
-- pwd
-- cd docker
-- ls
-- pwd
-- docker-compose up -d
-- cd ..
 - pip install psycopg2
 - pip install sqlalchemy
 - pip install pycurl
