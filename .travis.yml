@@ -19,7 +19,7 @@ before_script:
 - cd ..
 
 script:
-- cd daemon
+- cd daemon/unittest
 - ls
 - pwd
-- python3 unittest/dbservicetestcase.py
+- python3 dbservicetestcase.py
