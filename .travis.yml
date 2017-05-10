@@ -21,8 +21,8 @@ before_script:
 
 script:
 - cd daemon/unittest
-- netstat -apn |grep 5432
-- netstat -apn |grep 2345
+- sudo netstat -apn |grep 5432
+- sudo netstat -apn |grep 2345
 - ls
 - pwd
 - python3 dbservicetestcase.py
