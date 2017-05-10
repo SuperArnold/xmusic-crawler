@@ -23,6 +23,7 @@ script:
 - cd daemon/unittest
 - sudo netstat -apn |grep 5432
 - sudo netstat -apn |grep 2345
+- docker exec -it xmusic-daemon bash
 - ls
 - pwd
 - python3 dbservicetestcase.py
