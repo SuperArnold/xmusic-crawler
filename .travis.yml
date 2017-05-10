@@ -21,7 +21,8 @@ before_script:
 script:
 - sudo netstat -apn |grep 5432
 - sudo netstat -apn |grep 2345
-- docker exec -it "xmusic-db" bash -c "psql xmusic -U admin;select  name from providers;"
+- docker exec -it "xmusic-db" bash -c "psql xmusic -U admin;\d"
+- docker exec -it "xmusic-db" bash -c "psql xmusic -U admin;\d;"
 - ls
 - psql xmusic -U admin
 - select name from providers;
