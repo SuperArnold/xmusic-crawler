@@ -19,10 +19,9 @@ before_script:
 - cd ..
 
 script:
-- cd daemon/unittest
 - sudo netstat -apn |grep 5432
 - sudo netstat -apn |grep 2345
-- docker exec -c root "xmusic-db" sh "ls"
+- docker exec -t "xmusic-db" bash 
 - ls
 - psql xmusic -U admin
 - select name from providers;
