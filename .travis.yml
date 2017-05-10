@@ -22,7 +22,7 @@ script:
 - cd daemon/unittest
 - sudo netstat -apn |grep 5432
 - sudo netstat -apn |grep 2345
-- docker exec -it "xmusic-db" bash
+- docker exec -it "xmusic-db"
 - psql xmusic -U admin
 - select name from providers;
 - \d
