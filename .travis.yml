@@ -22,6 +22,6 @@ script:
 - cd daemon/unittest
 - sudo netstat -apn |grep 5432
 - sudo netstat -apn |grep 2345
-- docker exec -u root "xmusic-db" sh -c "psql xmusic -U admin"
+- docker exec -u root "xmusic-daemon" sh -c "cd /var/xmusic/unittest;python3 dbservicetestcase.py"
 - select name from provisers;
 - \d
