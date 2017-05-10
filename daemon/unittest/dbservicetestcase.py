@@ -25,7 +25,7 @@ class DBServiceTestCase(unittest.TestCase):
                     config.db_port,
                     config.db_database)
             print("--------------------------------------")
-            self.provider = ProviderRepo().get_provider("youtube")
+            self.provider = ProviderRepo().get_provider("youtube")[0]
             print("======================================")
 
         except:
