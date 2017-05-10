@@ -21,7 +21,7 @@ class DBServiceTestCase(unittest.TestCase):
             config = Config("../xmusic.cfg")
             db_init(config.db_username,
                     config.db_password,
-                    config.db_host,
+                    "0.0.0.0",
                     config.db_port,
                     config.db_database)
             print("--------------------------------------")
