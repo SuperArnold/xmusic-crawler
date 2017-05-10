@@ -11,7 +11,7 @@ services:
             - POSTGRES_PASSWORD=admin
             - POSTGRES_DB=xmusic
         ports:
-            - 2345:5432
+            - 5432:5432
     xmusic-daemon:
         container_name: xmusic-daemon
         build:
