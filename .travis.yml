@@ -3,7 +3,7 @@ python:
 - 3.5
 
 services:
-- docker
+- docker 17.0
 
 before_script:
 - pip install psycopg2
