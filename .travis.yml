@@ -13,7 +13,12 @@ before_script:
 - pip install json-rpc
 - pip install psutil
 - pip install pycurl
-- cd docker
+- cd docker/xmusic-daemon
+- docker build - < Dockerfile
+- cd ..
+- cd docker/xmusic-db
+- docker build - < Dockerfile
+- cd ..
 - docker-compose up -d
 - docker-compose ps
 - cd ..
