@@ -15,12 +15,11 @@ before_script:
 - pip install pycurl
 - cd docker
 - pwd
-- cd ..
 - docker-compose up -d
-- docker build - < docker/xmusic-daemon/Dockerfile
-- docker build - < docker/xmusic-db/Dockerfile
 - docker-compose ps
 - cd ..
+- docker build - < docker/xmusic-daemon/Dockerfile
+- docker build - < docker/xmusic-db/Dockerfile
 
 script:
 - cd daemon/unittest
