@@ -16,9 +16,9 @@ before_script:
 - cd docker/xmusic-daemon
 - docker build - < Dockerfile
 - cd ..
-- cd docker/xmusic-db
+- cd xmusic-db
 - docker build - < Dockerfile
-- cd ..
+- cd ../..
 - docker-compose up -d
 - docker-compose ps
 - cd ..
