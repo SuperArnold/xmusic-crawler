@@ -14,9 +14,8 @@ before_script:
 - pip install psutil
 - pip install pycurl
 - pwd
-- cd docker
-- docker build - < xmusic-daemon/Dockerfile
-- docker build - < xmusic-db/Dockerfile
+- docker build - < docker/xmusic-daemon/Dockerfile
+- docker build - < docker/xmusic-db/Dockerfile
 - docker-compose up -d
 - docker-compose ps
 - cd ..
