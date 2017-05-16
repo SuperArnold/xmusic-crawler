@@ -27,6 +27,6 @@ script:
 - sudo netstat -apn |grep 2345
 - docker exec -it xmusic-db bash -c "psql -l -U postgres"
 - ls
-- psql xmusic -U admin
+- psql -l -U postgres
 - select name from providers;
 - \d
