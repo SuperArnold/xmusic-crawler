@@ -25,8 +25,7 @@ script:
 - python3 dbservicetestcase.py
 - sudo netstat -apn |grep 5432
 - sudo netstat -apn |grep 2345
-- docker exec -it xmusic-db bash
+- docker exec xmusic-db test
+
+test:
 - ls
-- psql -l -U postgres
-- select name from providers;
-- \d
