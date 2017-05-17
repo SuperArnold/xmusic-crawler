@@ -28,4 +28,5 @@ script:
 - docker exec -it xmusic-db bash -c "ps auxw | grep post"
 - docker exec -it xmusic-db bash -c "find / -name .s.PGSQL.5432 -ls"
 - docker exec -it xmusic-db bash -c "pwd"
+- docker exec -it xmusic-db bash -c "ls"
 - psql -l -U postgres
