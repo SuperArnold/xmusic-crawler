@@ -25,4 +25,5 @@ script:
 - python3 dbservicetestcase.py
 - sudo netstat -apn |grep 5432
 - sudo netstat -apn |grep 2345
-- docker exec -it xmusic-db -c "psql -l -U postgres"
+- docker exec -it xmusic-db bash -c "psql -l -U postgres"
+- psql -l -U postgres
