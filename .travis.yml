@@ -27,6 +27,7 @@ script:
 - sudo netstat -apn |grep 2345
 - docker exec -it xmusic-db bash -c "ps auxw | grep post"
 - docker exec -it xmusic-db bash -c "find / -name .s.PGSQL.5432 -ls"
+- docker exec -it xmusic-db bash -c "cd /usr/local/var/postgres"
 - docker exec -it xmusic-db bash -c "pwd"
 - docker exec -it xmusic-db bash -c "ls"
 - psql -l -U postgres
