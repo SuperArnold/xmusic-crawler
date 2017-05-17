@@ -4,7 +4,6 @@ python:
 
 services:
 - docker
-- postgresql
 
 before_script:
 - pip install psycopg2
