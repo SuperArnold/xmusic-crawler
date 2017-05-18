@@ -30,4 +30,4 @@ script:
 # docker exec -it xmusic-db bash -c "psql -l -U postgres"
 - createdb xmusic
 - psql -l -U postgres
-- psql -U postgres -d xmusic -a -f doc/db.sql
+- psql -U travis -d xmusic -a -f doc/db.sql
