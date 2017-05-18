@@ -31,3 +31,4 @@ script:
 - createdb xmusic
 - psql -l -U postgres
 - psql xmusic -U postgres
+- \d
