@@ -18,6 +18,10 @@ before_script:
 # docker-compose ps
 - cd ..
 
+before_script
+- psql -c 'create database xmusic;' -U postgres
+- psql -U postgres -d xmusic -a -f doc/db.sql
+
 script:
 # cd daemon/unittest
 - python3 test.py
@@ -28,6 +32,4 @@ script:
 # docker exec -it xmusic-db bash -c "find / -name .s.PGSQL.5432 -ls"
 # docker exec -it xmusic-db bash -c "cd usr;ls;cd local;ls;cd var;ls;cd postgres;ls"
 # docker exec -it xmusic-db bash -c "psql -l -U postgres"
-- psql -c 'create database xmusic;' -U postgres
 - psql -l -U postgres
-- psql -U postgres -d xmusic -a -f doc/db.sql
