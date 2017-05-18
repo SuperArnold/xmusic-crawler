@@ -14,20 +14,20 @@ before_script:
 - pip install psutil
 - pip install pycurl
 - cd docker
-- docker-compose up -d
-- docker-compose ps
+# docker-compose up -d
+# docker-compose ps
 - cd ..
 
 script:
-- cd daemon/unittest
+# cd daemon/unittest
 - python3 test.py
-- python3 dbservicetestcase.py
-- sudo netstat -apn |grep 5432
-- sudo netstat -apn |grep 2345
-- docker exec -it xmusic-db bash -c "ps auxw | grep post"
-- docker exec -it xmusic-db bash -c "find / -name .s.PGSQL.5432 -ls"
-- docker exec -it xmusic-db bash -c "cd usr;ls;cd local;ls;cd var;ls;cd postgres;ls"
-- docker exec -it xmusic-db bash -c "psql -l -U postgres"
+# python3 dbservicetestcase.py
+# sudo netstat -apn |grep 5432
+# sudo netstat -apn |grep 2345
+# docker exec -it xmusic-db bash -c "ps auxw | grep post"
+# docker exec -it xmusic-db bash -c "find / -name .s.PGSQL.5432 -ls"
+# docker exec -it xmusic-db bash -c "cd usr;ls;cd local;ls;cd var;ls;cd postgres;ls"
+# docker exec -it xmusic-db bash -c "psql -l -U postgres"
 - createdb xmusic
 - psql -l -U postgres
-- psql -c "\d;" xmusic -U postgres
+- psql -U postgres -d xmusic -a -f doc/db.sql
