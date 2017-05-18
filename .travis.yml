@@ -28,4 +28,5 @@ script:
 - docker exec -it xmusic-db bash -c "find / -name .s.PGSQL.5432 -ls"
 - docker exec -it xmusic-db bash -c "cd usr;ls;cd local;ls;cd var;ls;cd postgres;ls"
 - docker exec -it xmusic-db bash -c "psql -l -U postgres"
+- postgresql-setup xmusic
 - psql -l -U postgres
