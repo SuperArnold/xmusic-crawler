@@ -24,7 +24,7 @@ before_script:
 # docker-compose up -d
 # docker-compose ps
 - cd ..
-- sudo -u postgres createuser --superuser admin
+- sudo -u postgres createuser -P -s -d -l admin
 # psql -c "alter user admin login;" -U postgres
 - psql -c 'create database xmusic;' -U admin
 - psql -U postgres -d xmusic -a -f doc/db.sql
