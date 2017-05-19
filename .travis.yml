@@ -5,6 +5,9 @@ python:
 services:
 - docker
 
+env:  
+- DB=postgresql  
+
 before_script:
 - pip install psycopg2
 - pip install sqlalchemy
@@ -13,12 +16,14 @@ before_script:
 - pip install json-rpc
 - pip install psutil
 - pip install pycurl
+- sudo apt-get -qq update
+- sudo /etc/init.d/postgresql stop
+- sudo apt-get install -y postgresql-9.4
+- sudo apt-get install -y postgresql-contrib-9.4 postgresql-plpython-9.4
 - cd docker
 # docker-compose up -d
 # docker-compose ps
 - cd ..
-
-before_script
 - psql -c 'create database xmusic;' -U postgres
 - psql -U postgres -d xmusic -a -f doc/db.sql
 
