@@ -26,7 +26,7 @@ before_script:
 - cd ..
 - psql -c "CREATE USER admin WITH PASSWORD 'admin' CREATEDB;" -U postgres
 - psql -c "alter user admin login;" -U postgres
-- psql -c 'create database xmusic;' -U admin
+- psql -c 'create database xmusic;' -U postgres
 - psql -U postgres -d xmusic -a -f doc/db.sql
 
 script:
