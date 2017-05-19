@@ -31,11 +31,12 @@ before_script:
 script:
 - cd daemon/unittest
 - python3 test.py
-- python3 dbservicetestcase.py
+# python3 dbservicetestcase.py
 # sudo netstat -apn |grep 5432
 # sudo netstat -apn |grep 2345
 # docker exec -it xmusic-db bash -c "ps auxw | grep post"
 # docker exec -it xmusic-db bash -c "find / -name .s.PGSQL.5432 -ls"
 # docker exec -it xmusic-db bash -c "cd usr;ls;cd local;ls;cd var;ls;cd postgres;ls"
 # docker exec -it xmusic-db bash -c "psql -l -U postgres"
+- psql xmusic -c 'select name from providers;' -U postgres
 - psql -l -U postgres
