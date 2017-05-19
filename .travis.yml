@@ -24,8 +24,8 @@ before_script:
 # docker-compose up -d
 # docker-compose ps
 - cd ..
-- psql -c "CREATE ROLE admin WITH PASSWORD 'admin' CREATEDB;" -U postgres
-- psql -c "alter user root login;" -U postgres
+- psql -c "CREATE USER admin WITH PASSWORD 'admin' CREATEDB;" -U postgres
+- psql -c "alter user admin login;" -U postgres
 - psql -c 'create database xmusic;' -U admin
 - psql -U postgres -d xmusic -a -f doc/db.sql
 
