@@ -24,3 +24,5 @@ script:
 - python3 test.py
 - python3 dbservicetestcase.py
 - python3 albumrepotestcase.py
+- python3 dbservicetestcase.py
+- python3 trackrepotestcase.py
