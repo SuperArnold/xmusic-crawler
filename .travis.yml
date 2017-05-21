@@ -11,9 +11,9 @@ before_script:
 - pip install psutil
 - pip install pycurl
 - sudo apt-get -qq update
-- sudo /etc/init.d/postgresql stop
-# sudo apt-get install -y postgresql-9.4
-- sudo apt-get install -y postgresql-contrib-9.4 postgresql-plpython-9.4
+# sudo /etc/init.d/postgresql stop
+- sudo apt-get install -y postgresql-9.4
+# sudo apt-get install -y postgresql-contrib-9.4 postgresql-plpython-9.4
 - sudo -u postgres createuser -s -d -l admin
 - psql -c "alter user admin login;" -U postgres
 - psql -c 'CREATE DATABASE xmusic' -U postgres
