@@ -25,7 +25,7 @@ class AlbumRepoTestCase(unittest.TestCase):
             self.provider_repo = ProviderRepo()
             self.artist_repo = ArtistRepo()
 
-            self.provider = ProviderRepo().get_provider("youtube")[0]
+            self.provider = ProviderRepo().get_provider("youtube")
 
             # test data
             self.artist = Artist("obama II", 123)
