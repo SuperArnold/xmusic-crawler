@@ -29,3 +29,4 @@ script:
 - cd daemon/unittest
 - python3 test.py
 - python3 dbservicetestcase.py
+- python3 albumrepotestcase.py
