@@ -2,8 +2,6 @@ language: python
 python:
 - 3.5
 
-env:  
-- DB=postgresql  
 
 before_script:
 - pip install psycopg2
