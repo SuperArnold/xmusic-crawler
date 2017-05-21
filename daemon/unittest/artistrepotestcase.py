@@ -24,7 +24,7 @@ class AritstRepoTestCase(unittest.TestCase):
             self.repo = ArtistRepo()
             self.provider_repo = ProviderRepo()
 
-            self.provider = ProviderRepo().get_provider("youtube")[0]
+            self.provider = ProviderRepo().get_provider("youtube")
 
             # test data
             self.data_list = []
