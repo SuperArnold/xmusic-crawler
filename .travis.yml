@@ -6,16 +6,13 @@ services:
 - postgresql
 
 addons:
-  postgresql: "9.6"
-  
-#addons:
-#  apt:
-#    sources:
-#    - precise-pgdg-9.5
-#    packages:
-#    - postgresql-9.5
-#    - postgresql-contrib-9.5
-#  postgresql: 9.5
+  apt:
+    sources:
+    - precise-pgdg-9.6
+    packages:
+    - postgresql-9.6
+    - postgresql-contrib-9.6
+  postgresql: 9.6
 
 before_script:
 - pip install psycopg2
