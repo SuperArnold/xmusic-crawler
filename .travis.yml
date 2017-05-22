@@ -12,7 +12,7 @@ addons:
 #    packages:
 #    - postgresql-9.5
 #    - postgresql-contrib-9.5
-  postgresql: 9.5
+  postgresql: 9.6
 
 before_script:
 - pip install psycopg2
