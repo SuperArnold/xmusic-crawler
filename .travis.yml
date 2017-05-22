@@ -6,7 +6,7 @@ services:
 - postgresql
 
 sudo:
-  false
+  required
 
 addons:
 #  apt:
