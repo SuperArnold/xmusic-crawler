@@ -6,12 +6,12 @@ services:
 - postgresql
 
 addons:
-  apt:
-    sources:
-    - precise-pgdg-9.5
-    packages:
-    - postgresql-9.5
-    - postgresql-contrib-9.5
+#  apt:
+#    sources:
+#    - precise-pgdg-9.5
+#    packages:
+#    - postgresql-9.5
+#    - postgresql-contrib-9.5
   postgresql: 9.5
 
 before_script:
