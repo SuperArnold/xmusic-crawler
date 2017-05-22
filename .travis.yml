@@ -1,6 +1,9 @@
 language: python
 python:
-- 3.5
+- 3.6
+
+services:
+- postgresql
 
 before_script:
 - pip install psycopg2
@@ -21,7 +24,6 @@ before_script:
 
 script:
 - cd daemon/unittest
-- python3 test.py
 - python3 dbservicetestcase.py
 - python3 albumrepotestcase.py
 - python3 dbservicetestcase.py
